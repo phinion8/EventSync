@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chat_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondaryColor"
+        tools:context=".presentation.main_screens.chats_screen.chat_activity.ChatActivity">
+
+
+        <ImageView
+            android:id="@+id/send_message_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/send_message_btn_background"
+            android:padding="8dp"
+            android:src="@drawable/ic_send_message"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/et_send_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/send_message_edit_text_background"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="Type a message..."
+            android:inputType="text"
+            android:paddingStart="24dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/send_message_btn"
+            app:layout_constraintEnd_toStartOf="@+id/send_message_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/send_message_btn" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:background="@color/secondaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/sample_profile_img"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/back_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/back_btn"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/chat_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Username"
+                android:textColor="@color/primaryColor"
+                app:layout_constraintStart_toEndOf="@+id/profile_image"
+                app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Online"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/chat_user_name"
+                app:layout_constraintTop_toBottomOf="@+id/chat_user_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_chat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:stackFromEnd="true"
+            android:padding="20dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/et_send_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

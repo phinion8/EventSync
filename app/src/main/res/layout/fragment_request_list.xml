@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.profile_page_screen.request_list_screen.RequestListFragment">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/no_friend_found_anim"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.411"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/no_search_result_anim" />
+
+        <TextView
+            android:id="@+id/no_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:text="No Request Found"
+            android:textColor="@color/content_grey_color"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/no_friend_found_anim"
+            app:layout_constraintStart_toStartOf="@+id/no_friend_found_anim"
+            app:layout_constraintTop_toBottomOf="@+id/no_friend_found_anim" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Request List"
+            android:textColor="@color/primaryColor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+            app:layout_constraintStart_toEndOf="@+id/back_btn"
+            app:layout_constraintTop_toTopOf="@+id/back_btn" />
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/search_edit_text_background"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins"
+            android:hint="Search Friend Requests"
+            android:inputType="text"
+            android:singleLine="true"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:imeOptions="actionSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_requests"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_search" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

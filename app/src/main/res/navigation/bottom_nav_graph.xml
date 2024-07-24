@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.eventsync.presentation.main_screens.home_screen.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.app.eventsync.presentation.main_screens.chats_screen.ChatsFragment"
+        android:label="fragment_chats"
+        tools:layout="@layout/fragment_chats" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.app.eventsync.presentation.main_screens.profile_screen.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/analystFragment"
+        android:name="com.app.eventsync.presentation.user_data_screens.analyst_screen.AnalystFragment"
+        android:label="fragment_analyst"
+        tools:layout="@layout/fragment_analyst" />
+</navigation>

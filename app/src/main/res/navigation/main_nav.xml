@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.app.eventsync.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_createEventFragment"
+            app:destination="@id/createEventFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_enrolledEventsFragment"
+            app:destination="@id/enrolledEventsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_userCreatedEventFragment"
+            app:destination="@id/userCreatedEventFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addFriendFragment"
+            app:destination="@id/addFriendFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_eventDetailsFragment2"
+            app:destination="@id/eventDetailsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_self"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_createEventDetailFragment"
+            app:destination="@id/createEventDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEventFragment"
+        android:name="com.app.eventsync.presentation.event_screens.create_event_screen.CreateEventFragment"
+        android:label="CreateEventFragment" >
+        <action
+            android:id="@+id/action_createEventFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+        <action
+            android:id="@+id/action_createEventFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventDetailsFragment"
+        android:name="com.app.eventsync.presentation.event_screens.event_detail_screen.show_event_detail_screen.EventDetailsFragment"
+        android:label="fragment_event_details"
+        tools:layout="@layout/fragment_event_details" >
+        <action
+            android:id="@+id/action_eventDetailsFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/enrolledEventsFragment"
+        android:name="com.app.eventsync.presentation.user_data_screens.enrolled_event_screen.EnrolledEventsFragment"
+        android:label="EnrolledEventsFragment" >
+        <action
+            android:id="@+id/action_enrolledEventsFragment_to_eventDetailsFragment3"
+            app:destination="@id/eventDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userCreatedEventFragment"
+        android:name="com.app.eventsync.presentation.user_data_screens.user_created_event_screen.UserCreatedEventFragment"
+        android:label="UserCreatedEventFragment" >
+        <action
+            android:id="@+id/action_userCreatedEventFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+        <action
+            android:id="@+id/action_userCreatedEventFragment_to_createEventFragment"
+            app:destination="@id/createEventFragment" />
+        <action
+            android:id="@+id/action_userCreatedEventFragment_to_eventDetailsFragment2"
+            app:destination="@id/eventDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.app.eventsync.presentation.profile_page_screen.UserProfileFragment"
+        android:label="UserProfileFragment" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_requestListFragment"
+            app:destination="@id/requestListFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_friendListFragment"
+            app:destination="@id/friendListFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendListFragment"
+        android:name="com.app.eventsync.presentation.profile_page_screen.friend_list_screen.FriendListFragment"
+        android:label="fragment_friend_list"
+        tools:layout="@layout/fragment_friend_list" >
+        <action
+            android:id="@+id/action_friendListFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestListFragment"
+        android:name="com.app.eventsync.presentation.profile_page_screen.request_list_screen.RequestListFragment"
+        android:label="RequestListFragment" >
+        <action
+            android:id="@+id/action_requestListFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.app.eventsync.presentation.notification_screen.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.app.eventsync.presentation.profile_page_screen.edit_profile_screen.EditProfileFragment"
+        android:label="EditProfileFragment" />
+    <fragment
+        android:id="@+id/addFriendFragment"
+        android:name="com.app.eventsync.presentation.user_data_screens.add_friend_screen.AddFriendFragment"
+        android:label="fragment_add_friend"
+        tools:layout="@layout/fragment_add_friend" >
+        <action
+            android:id="@+id/action_addFriendFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment3"
+        android:name="com.app.eventsync.presentation.main_screens.profile_screen.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment3_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.app.eventsync.presentation.authentication_screens.login_screen.LoginFragment"
+        android:label="LoginFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.app.eventsync.presentation.search_screen.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_eventDetailsFragment"
+            app:destination="@id/eventDetailsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/commentsBottomSheetFragment"
+        android:name="com.app.eventsync.presentation.comment_screen.CommentsBottomSheetFragment"
+        android:label="CommentsBottomSheetFragment" >
+        <action
+            android:id="@+id/action_commentsBottomSheetFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/createEventDetailFragment"
+        android:name="com.app.eventsync.presentation.event_screens.event_detail_screen.create_event_detail.CreateEventDetailFragment"
+        android:label="CreateEventDetailFragment" >
+        <action
+            android:id="@+id/action_createEventDetailFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/friendListBottomSheetFragment"
+        android:name="com.app.eventsync.presentation.event_screens.event_detail_screen.add_friend_in_event_screen.FriendListBottomSheetFragment"
+        android:label="FriendListBottomSheetFragment" >
+        <action
+            android:id="@+id/action_friendListBottomSheetFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </dialog>
+</navigation>

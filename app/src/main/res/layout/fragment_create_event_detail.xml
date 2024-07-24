@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/create_event_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".presentation.event_screens.event_detail_screen.create_event_detail.CreateEventDetailFragment" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            android:paddingBottom="62dp">
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/allow_comments_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Allow Comments"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/et_location"
+                app:layout_constraintTop_toBottomOf="@+id/et_limit_seats" />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Location"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/et_requirements"
+                app:layout_constraintTop_toBottomOf="@+id/et_requirements" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/event_edit_text_background"
+                android:drawableEnd="@drawable/ic_loacation"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Location"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/primaryColor"
+                android:textColorHighlight="@color/content_grey_color"
+                android:textColorHint="@color/content_grey_color"
+                android:textColorLink="@color/content_grey_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/location_text"
+                app:layout_constraintTop_toBottomOf="@+id/location_text" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Start"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_description" />
+
+            <TextView
+                android:id="@+id/et_start_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/event_edit_text_background"
+                android:drawableEnd="@drawable/ic_clock"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Select the start date and time"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/primaryColor"
+                android:textColorHighlight="@color/content_grey_color"
+                android:textColorHint="@color/content_grey_color"
+                android:textColorLink="@color/content_grey_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_payment_requirement"
+                android:layout_width="0dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/event_edit_text_background"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Specify payment requirements (Optional)"
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textColor="@color/primaryColor"
+                android:textColorHighlight="@color/content_grey_color"
+                android:textColorHint="@color/content_grey_color"
+                android:textColorLink="@color/content_grey_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/allow_comments_switch"
+                app:layout_constraintTop_toBottomOf="@+id/payment_requirement_text" />
+
+            <TextView
+                android:id="@+id/payment_requirement_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Payment Requirements"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/allow_comments_switch"
+                app:layout_constraintTop_toBottomOf="@+id/private_mode_switch" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/limit_seats_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Limit Seats"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/et_location"
+                app:layout_constraintTop_toBottomOf="@+id/et_oraganizaton" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/private_mode_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Private Mode"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/et_location"
+                app:layout_constraintTop_toBottomOf="@+id/allow_comments_switch" />
+
+            <TextView
+                android:id="@+id/organisatin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Organization Type"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/et_location"
+                app:layout_constraintTop_toBottomOf="@+id/et_location" />
+
+            <TextView
+                android:id="@+id/et_end_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/event_edit_text_background"
+                android:drawableEnd="@drawable/ic_clock"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Select the end date and time"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/primaryColor"
+                android:textColorHighlight="@color/content_grey_color"
+                android:textColorHint="@color/content_grey_color"
+                android:textColorLink="@color/content_grey_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/end_date_time_text"
+                app:layout_constraintTop_toBottomOf="@+id/end_date_time_text" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_requirements"
+                android:layout_width="0dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/event_edit_text_background"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Specify your requirements if any (Optional)"
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textColor="@color/primaryColor"
+                android:textColorHighlight="@color/content_grey_color"
+                android:textColorHint="@color/content_grey_color"
+                android:textColorLink="@color/content_grey_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Requirements"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/repeat_event_switch"
+                app:layout_constraintTop_toBottomOf="@+id/repeat_event_switch" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/enrolled_person_img_3"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/sample_profile_img"
+                app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_2"
+                app:layout_constraintStart_toEndOf="@+id/enrolled_person_img_1"
+                app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/enrolled_person_img_2"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="32dp"
+                android:src="@drawable/sample_profile_img"
+                app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_1"
+                app:layout_constraintStart_toStartOf="@+id/enrolled_person_img_1"
+                app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/enrolled_person_img_1"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/sample_profile_img"
+                app:layout_constraintStart_toStartOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+            <TextView
+                android:id="@+id/tv_enrollment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="+5"
+                android:textColor="@color/primaryColor"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_3"
+                app:layout_constraintStart_toEndOf="@+id/enrolled_person_img_3"
+                app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_3" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Select Collabrators"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_oraganizaton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/event_edit_text_background"
+                android:drawableEnd="@drawable/ic_loacation"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Enter oraganization type"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textColor="@color/primaryColor"
+                android:textColorHighlight="@color/content_grey_color"
+                android:textColorHint="@color/content_grey_color"
+                android:textColorLink="@color/content_grey_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/location_text"
+                app:layout_constraintTop_toBottomOf="@+id/organisatin_text" />
+
+            <TextView
+                android:id="@+id/end_date_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="End"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/et_start_date_time"
+                app:layout_constraintTop_toBottomOf="@+id/et_start_date_time" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_description"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/event_edit_text_background"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="top"
+                android:hint="Details about the event."
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textColor="@color/primaryColor"
+                android:textColorHighlight="@color/content_grey_color"
+                android:textColorHint="@color/content_grey_color"
+                android:textColorLink="@color/content_grey_color"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView17"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Description"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enrolled_person_img_1" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/repeat_event_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Repeat Event"
+                android:textColor="@color/primaryColor"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_end_date_time" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/select_collaborator_btn"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Select"
+                app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_2" />
+
+            <EditText
+                android:id="@+id/et_limit_seats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="62dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:hint="Count"
+                android:inputType="numberSigned"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/limit_seats_switch"
+                app:layout_constraintStart_toStartOf="@+id/limit_seats_switch"
+                app:layout_constraintTop_toBottomOf="@+id/limit_seats_switch" />
+
+            <TextView
+                android:id="@+id/tv_no_one_selected"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins"
+                android:text="No Collaborator Selected"
+                android:textColor="@color/content_grey_color"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_2"
+                app:layout_constraintEnd_toStartOf="@+id/select_collaborator_btn"
+                app:layout_constraintStart_toEndOf="@+id/enrolled_person_img_3"
+                app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_2" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/poppins"
+                android:text="If turned on only participants can see who is enrolled."
+                android:textColor="@color/content_grey_color"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/private_mode_switch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/private_mode_switch"
+                app:layout_constraintTop_toTopOf="@+id/private_mode_switch" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.profile_page_screen.edit_profile_screen.EditProfileFragment" >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingLeft="32dp"
+            android:paddingTop="0dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="0dp"
+            android:text="Update"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/textView31"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/forget_password_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="64dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Forget password"
+            android:textColor="@android:color/white"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_email" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="User ID"
+            android:textColor="@color/content_grey_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/textView29"
+            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Profile Information"
+            android:textColor="@color/primaryColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/back_btn"
+            app:layout_constraintTop_toBottomOf="@+id/change_profile_photo_btn" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeWidth="2dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:hintTextColor="@color/primaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView28">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="16dp"
+                android:fontFamily="@font/poppins_medium"
+                android:inputType="textPersonName"
+                android:text="Loading..." />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/sample_profile_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView31"
+            app:layout_constraintVertical_bias="0.081" />
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Edit Profile"
+            android:textColor="@color/primaryColor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+            app:layout_constraintStart_toEndOf="@+id/back_btn"
+            app:layout_constraintTop_toTopOf="@+id/back_btn" />
+
+        <TextView
+            android:id="@+id/change_profile_photo_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins"
+            android:text="Change profile photo"
+            android:textColor="@color/button_background_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_image"
+            app:layout_constraintStart_toStartOf="@+id/profile_image"
+            app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Personal Information"
+            android:textColor="@color/primaryColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView32"
+            app:layout_constraintStart_toStartOf="@+id/back_btn"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="E-mail"
+            android:textColor="@color/content_grey_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_userId" />
+
+        <TextView
+            android:id="@+id/tv_userId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Loading..."
+            android:textColor="@color/primaryColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView32"
+            app:layout_constraintEnd_toStartOf="@+id/copy_userId_btn"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/textView32"
+            app:layout_constraintTop_toTopOf="@+id/textView32"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/copy_userId_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_copy"
+            app:layout_constraintBottom_toBottomOf="@+id/textView32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView32" />
+
+        <TextView
+            android:id="@+id/tv_user_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Loading..."
+            android:textColor="@color/primaryColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/email_text"
+            app:layout_constraintEnd_toStartOf="@+id/copy_email_btn"
+            app:layout_constraintStart_toStartOf="@+id/tv_userId"
+            app:layout_constraintTop_toTopOf="@+id/email_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/copy_email_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_copy"
+            app:layout_constraintBottom_toBottomOf="@+id/email_text"
+            app:layout_constraintEnd_toEndOf="@+id/copy_userId_btn"
+            app:layout_constraintTop_toTopOf="@+id/email_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

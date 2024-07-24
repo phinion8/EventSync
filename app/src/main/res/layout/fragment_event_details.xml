@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.event_screens.event_detail_screen.show_event_detail_screen.EventDetailsFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/show_all_comment_btn"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Show All"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_comment_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_comment_title" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/enrolled_person_img_1"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/sample_profile_img"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+                <TextView
+                    android:id="@+id/payment_requirement_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Requirements"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_comment_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_comment_title" />
+
+                <TextView
+                    android:id="@+id/tv_requirements"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Loading..."
+                    android:textColor="@color/content_grey_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView27"
+                    app:layout_constraintTop_toBottomOf="@+id/payment_requirement_text" />
+
+                <TextView
+                    android:id="@+id/tv_enrollment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="+0"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_3"
+                    app:layout_constraintStart_toEndOf="@+id/enrolled_person_img_3"
+                    app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_3" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/enrolled_person_img_2"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="32dp"
+                    android:src="@drawable/sample_profile_img"
+                    app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintStart_toStartOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/enrolled_person_img_3"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="28dp"
+                    android:src="@drawable/sample_profile_img"
+                    app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_2"
+                    app:layout_constraintStart_toEndOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <ImageView
+                    android:id="@+id/back_btn"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ic_back_arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Event Details"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+                    app:layout_constraintStart_toEndOf="@+id/back_btn"
+                    app:layout_constraintTop_toTopOf="@+id/back_btn" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Loading..."
+                    android:textColor="@color/primaryColor"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/back_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:drawableLeft="@drawable/ic_clock"
+                    android:drawablePadding="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Loading..."
+                    android:textColor="@color/content_grey_color"
+                    app:layout_constraintStart_toStartOf="@+id/tv_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/show_all_user_btn"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Show All"
+                    app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_1" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Description"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintTop_toBottomOf="@+id/enrolled_person_img_1" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Loading..."
+                    android:textColor="@color/content_grey_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView24"
+                    app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Attached Media"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_description"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_organization_type" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="0dp"
+                    android:layout_height="160dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView26"
+                    app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Payment Requirements"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/payment_requirement_text"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_requirements" />
+
+                <TextView
+                    android:id="@+id/tv_payment_requirement"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Loading..."
+                    android:textColor="@color/content_grey_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView27"
+                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/ic_loacation"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Loading..."
+                    android:textColor="@color/content_grey_color"
+                    app:layout_constraintStart_toStartOf="@+id/tv_date"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Organization Type"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_description"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+                <TextView
+                    android:id="@+id/tv_organization_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Loading..."
+                    android:textColor="@color/content_grey_color"
+                    app:layout_constraintStart_toStartOf="@+id/textView30"
+                    app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+                <TextView
+                    android:id="@+id/tv_comment_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Comments"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_other_media" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/no_media_anim"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.523"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/recyclerView"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="false"
+                    app:lottie_rawRes="@raw/no_media_anim" />
+
+                <TextView
+                    android:id="@+id/no_media_found_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="No Media Found"
+                    android:textColor="@color/content_grey_color"
+                    app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+                    app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/recyclerView"
+                    app:layout_constraintVertical_bias="0.806" />
+
+                <Button
+                    android:id="@+id/add_img_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="+ Add Image"
+                    android:textColor="@color/secondaryColor"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Other Media"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView26"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_other_media"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView8"
+                    app:layout_constraintTop_toBottomOf="@+id/add_img_btn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/event_detail_bottom_background"
+            app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/tv_avialable_seats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="100"
+                android:textColor="#4CAF50"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/textView33"
+                app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Available Seats"
+                android:textColor="@color/primaryColor"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/enroll_now_btn" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/enroll_now_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:text="Enroll Now"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

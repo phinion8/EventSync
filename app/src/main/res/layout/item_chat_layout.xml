@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/recent_chat_profile_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/sample_profile_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Username"
+            android:textColor="@color/primaryColor"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/recent_chat_profile_img"
+            app:layout_constraintTop_toTopOf="@+id/recent_chat_profile_img" />
+
+        <TextView
+            android:id="@+id/tv_last_message"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="Hello I was hoping you will call me."
+            android:textColor="@color/content_grey_color"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/recent_chat_profile_img"
+            app:layout_constraintStart_toStartOf="@+id/tv_chat_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_chat_name" />
+
+        <TextView
+            android:id="@+id/tv_last_chat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="27 Dec"
+            android:textSize="13sp"
+            android:textColor="@color/content_grey_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_chat_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

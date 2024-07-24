@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/event_item_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/background_grey_color"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/background_img"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:alpha="0.2"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sample_background_photo"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_event_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="27 Dec 2023, 8:30 PM"
+                    android:textColor="@color/content_grey_color"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_isEnrolled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Not Enrolled"
+                    android:textColor="#FF6060"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/enroll_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/enroll_btn" />
+
+                <TextView
+                    android:id="@+id/tv_event_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Create a detailed budget for all teams and allocate it."
+                    android:textColor="@color/primaryColor"
+                    android:textSize="18sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_event_date" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/enrolled_person_img_1"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/sample_profile_img"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_event_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/enrolled_person_img_2"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="32dp"
+                    android:src="@drawable/sample_profile_img"
+                    app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintStart_toStartOf="@+id/tv_event_title"
+                    app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/enrolled_person_img_3"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="28dp"
+                    android:src="@drawable/sample_profile_img"
+                    app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_2"
+                    app:layout_constraintStart_toEndOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_enrollment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="+5"
+                    android:textColor="@color/primaryColor"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/enrolled_person_img_1"
+                    app:layout_constraintStart_toEndOf="@+id/enrolled_person_img_3"
+                    app:layout_constraintTop_toTopOf="@+id/enrolled_person_img_3" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/enroll_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/poppins_bold"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:text="ENROLL NOW"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/enrolled_person_img_1" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableLeft="@drawable/ic_loacation"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="40001, Mumbai, India"
+                    android:textColor="@color/content_grey_color"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/background_img"
+                    app:layout_constraintStart_toStartOf="@+id/tv_event_title"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_event_title" />
+
+                <ImageView
+                    android:id="@+id/edit_img"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_edit" />
+
+                <TextView
+                    android:id="@+id/no_enrollment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="No one is enrolled yet."
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

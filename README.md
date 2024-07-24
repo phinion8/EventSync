@@ -1,0 +1,1 @@
+An app-based platform that allows users to create, search, and delete an event with features like google one tap sign-in, real-time notifications, chat with event collaborators, and comment feature on events. 

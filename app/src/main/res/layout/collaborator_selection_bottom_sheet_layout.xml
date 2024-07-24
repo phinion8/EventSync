@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            app:behavior_hideable="true"
+            android:background="@drawable/bottom_sheet_background">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/no_friend_found_anim"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.411"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/no_search_result_anim" />
+
+            <TextView
+                android:id="@+id/no_data_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="No Friends Found"
+                android:textColor="@color/content_grey_color"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/no_friend_found_anim"
+                app:layout_constraintStart_toStartOf="@+id/no_friend_found_anim"
+                app:layout_constraintTop_toBottomOf="@+id/no_friend_found_anim" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/search_edit_text_background"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="8dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="Search Friend"
+                android:inputType="text"
+                android:padding="14dp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/submit_list_btn" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_friend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_collaborators" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_collaborators"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_search" />
+
+            <Button
+                android:id="@+id/submit_list_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/button_background_color"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="Done"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Select Collaborators"
+                android:textColor="@color/primaryColor"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+</layout>

@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EventSync" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="android:statusBarColor">@color/secondaryColor</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyle">
+
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+
+    </style>
+
+    <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#E4E4E4</item>
+    </style>
+
+    <style name="RoundedCorner">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="CustomTabTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="Theme.EventSync" parent="Base.Theme.EventSync" />
+
+    <style name="CalendarDataTextStyle" parent="android:TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="CalendarWeeksTextStyle" parent="android:TextAppearance.DeviceDefault">
+        <item name="android:textColor">@color/primaryColor</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="PopupMenuTitleTextStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">16sp</item> <!-- Adjust the text size as needed -->
+        <item name="android:textColor">@color/primaryColor</item>
+    </style>
+</resources>
+

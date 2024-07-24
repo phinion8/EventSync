@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            app:behavior_hideable="true"
+            android:background="@drawable/bottom_sheet_background">
+
+            <EditText
+                android:id="@+id/et_send_comment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/send_message_edit_text_background"
+                android:backgroundTint="@color/secondaryColor"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="Type a comment..."
+                android:inputType="text"
+                android:paddingStart="24dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/send_comment_btn"
+                app:layout_constraintEnd_toStartOf="@+id/send_comment_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/send_comment_btn" />
+
+            <ImageView
+                android:id="@+id/send_comment_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/send_message_btn_background"
+                android:padding="8dp"
+                android:src="@drawable/ic_send_message"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/no_comment_found_anim"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.411"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/no_comments_anim" />
+
+            <TextView
+                android:id="@+id/no_data_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="No comments found\nBe the first one to comment!"
+                android:textColor="@color/content_grey_color"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/no_comment_found_anim"
+                app:layout_constraintStart_toStartOf="@+id/no_comment_found_anim"
+                app:layout_constraintTop_toBottomOf="@+id/no_comment_found_anim" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comments"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/et_send_comment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Comments"
+                android:textColor="@color/primaryColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+</layout>
