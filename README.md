@@ -42,10 +42,6 @@ An app-based platform that allows users to create, search, and delete an event w
 <p align="center">
   <img src="screenshots/screenshot_1_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
   <img src="screenshots/screenshot_2_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/screenshot_3_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/screenshot_4_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/screenshot_5_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/screenshot_6_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
   <img src="screenshots/screenshot_7_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
   <img src="screenshots/screenshot_8_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
   <img src="screenshots/screenshot_9_light.png" alt="" width="200"/>&nbsp;&nbsp;&nbsp;
