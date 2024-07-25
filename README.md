@@ -1,6 +1,8 @@
 **EventSync - Event Management App**<br>
 
-[Download APK](https://drive.google.com/file/d/1HTxQjPih5pIi234o9WKaa7k__3chGBMP/view?usp=sharing)
+[Download APK](https://drive.google.com/file/d/1HTxQjPih5pIi234o9WKaa7k__3chGBMP/view?usp=sharing) <br/>
+
+[Watch Preview Video](https://drive.google.com/file/d/1lPIk5AqvQYE_nzRtzsYmcKyKrix7iVJV/view?usp=sharing)
 
 ## Overview
 
